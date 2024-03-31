@@ -8,51 +8,82 @@
          | Mr.CAI BLOG
       
     </title>
-    <meta name="description" content=""/>
-    <meta name="keywords" content=""/>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
     
       <link rel="apple-touch-icon"
             sizes="180x180"
-            href="/images/apple-touch-icon.png"/>
+            href="/images/apple-touch-icon.png" />
     
     
       <link rel="icon"
             type="image/png"
             sizes="32x32"
-            href="/images/fire1.png"/>
+            href="/images/fire1.png" />
     
     
       <link rel="icon"
             type="image/png"
             sizes="16x16"
-            href="/images/fire.png"/>
+            href="/images/fire1.png" />
     
     
       <link rel="mask-icon"
-            href="/images/fire1.png"
-            color=""/>
+            href="/images/logo.svg"
+            color="" />
     
     
-    <link rel="stylesheet" type="text/css" href="/css/layout.css"/>
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/normal.ttf);
+        font-weight: normal;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css' />
     
     
   
-  <link rel="stylesheet" type="text/css" href="/css/index.css"/>
+  <link rel="stylesheet"
+        type="text/css"
+        href='/css/index.css'/>
 
   <meta name="generator" content="Hexo 6.3.0"></head>
   <body>
+    
     <div class="head">
       <div class="nav">
-        <a href="/" class="nav-logo">
+        <a href='/' class="nav-logo">
           <img alt="logo" height="60px" width="60px" src="/images/fire1.png" />
         </a>
-        <input id="navBtn" type="checkbox"/>
-        <div class="nav-menu">
+        <input id="navBtn" type="checkbox" />
+        <div class="nav-right">
           
+          <div class="nav-menu">
             
-              <a class="nav-menu-item" href="/xhd">我的儿子辛海东</a>
+              
+                <a class="nav-menu-item" href="/math">数学</a>
+              
+                <a class="nav-menu-item" href="/essay">随笔</a>
+              
             
-          
+            
+          </div>
         </div>
         <label class="nav-btn" for="navBtn"></label>
       </div>
@@ -63,7 +94,7 @@
     <div class="wall-main" id="wall-main">
       <div class="wall-title">MR.CAI BLOG</div>
       <div class="wall-subtitle"></div>
-      <div class="wall-description">“英特纳雄耐尔”</div>
+      <div class="wall-description">“星星之火”</div>
     </div>
     <div class="wall-bg">
       <div class="wall-bg-index">
@@ -72,10 +103,10 @@
           <div class="cursor"></div>
         </div>
         <div class="normal-eqt">
-          <img alt="normal" width="300px" height="" src="/images/normal.svg" />
+          <img alt="normal" width="300px" height="" src="/images/normal.svg"/>
         </div>
         <canvas width="400" height="400" id="heart-curve"></canvas>
-        <div class="motto">应无所住 而生其心</div>
+        <div class="motto">More Cooperation</div>
         <div class="poem">
           
             君不见高堂明镜悲白发
@@ -90,17 +121,25 @@
   </div>
   <div class="about">
     <div class="about-photo"
-         style="background-image: url(/images/ganyu.jpg)"></div>
+         style="background-image: url(/images/cjq.jpg)"></div>
     <div class="about-text">
       <div class="about-title">
-        <div class="matts">星</div><div class="matts">星</div><div class="matts">之</div><div class="matts">火</div>
+        
+          <div class="matts">星</div>
+        
+          <div class="matts">星</div>
+        
+          <div class="matts">之</div>
+        
+          <div class="matts">火</div>
+        
       </div>
       <div class="about-detail">
         <div class="about-text-p">
           
             
-              三尺讲台，难查秋毫
-              <br />
+              清泥玉璞,棱角鎏光
+              <br/>
             
           
             
@@ -108,8 +147,8 @@
             
           
             
-              好为人师，娇作弄嘲
-              <br />
+              皇锤权锻,丧魂失肠
+              <br/>
             
           
             
@@ -117,42 +156,24 @@
             
           
             
-              时运吾辈，风华正茂
-              <br />
+              围城林立,辱下尊上
+              <br/>
+            
+          
+            
+              <br/>
+            
+          
+            
+              窟中之火,乘风起浪
+              <br/>
             
           
         </div>
       </div>
     </div>
   </div>
-  <div class="timeline">
-    <div class="timeline-head">
-      <div class="title">时间线</div>
-      <div class="radio-wrapper">
-        <div class="radio">
-          <input id="radio-article" type="checkbox" />
-          <label class="radio-skin--yellow" for="radio-article"></label>
-        </div>
-        <div class="radio">
-          <input id="radio-app" type="checkbox" checked />
-          <label class="radio-skin--green" for="radio-app"></label>
-        </div>
-        <div class="radio">
-          <input id="radio-event" type="checkbox" checked />
-          <label class="radio-skin--blue" for="radio-event"></label>
-        </div>
-      </div>
-    </div>
-    <div class="timeline-body">
-      <div class="timeline-item-first">
-        <div class="line-anchor line-anchor--now"></div>
-      </div>
-      <div class="timeline-list" id="timeline-list"></div>
-      <div class="timeline-item-last">
-        <div class="line-anchor line-anchor--end"></div>
-      </div>
-    </div>
-  </div>
+  
 
     </div>
     <div class="foot">
@@ -175,20 +196,14 @@
               <div class="foot-item__body">
                 
                   <div class="text">
-                    <img alt="link"
-                         height="20px"
-                         width="20px"
-                         src="/images/icon/icon-link.svg"/>
-                    <a class="foot-link" target="_blank" rel="noopener" href="http://106.13.0.241/">xhd0728</a>
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg" />
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
                   </div>
                 
                 <div class="text">
-                  <img alt="link"
-                       height="20px"
-                       width="20px"
-                       src="/images/icon/icon-link+.svg"/>
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg" />
                   <a class="foot-link"
-                     href="mailto:caijiaqi911@foxmail.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                     href="mailto:2240020830@student.must.edu.mo?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
                   申请友链</a>
                 </div>
               </div>
@@ -200,12 +215,12 @@
               <div class="foot-item__body">
                 
                   <div class="text">
-                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg" />
                     <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/cjq0911">cjq0911</a>
                   </div>
                 
                   <div class="text">
-                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg" />
                     <a class="foot-link" target="_blank" rel="noopener" href="https://www.zhihu.com/people/shi-er-1-51">十二</a>
                   </div>
                 
@@ -216,11 +231,8 @@
             <div class="foot-item__head">联系</div>
             <div class="foot-item__body">
               <div class="text">
-                <img alt="link"
-                     height="20px"
-                     width="20px"
-                     src="/images/icon/icon-email.svg"/>
-                <a class="foot-link" href="mailto:caijiaqi911@foxmail.com">caijiaqi911@foxmail.com</a>
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg" />
+                <a class="foot-link" href="mailto:2240020830@student.must.edu.mo">2240020830@student.must.edu.mo</a>
               </div>
             </div>
           </div>
@@ -228,17 +240,20 @@
         <div class="copyright">
           <a href="http://cjq0911.github.io">Mr.CAI BLOG</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
           <svg width="20" height="20" viewBox="0 0 725 725">
-            <path fill-rule="evenodd" fill="rgb(221, 221, 221)"
-            d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z" />
-            <path fill-rule="evenodd" fill="rgb(159, 159, 159)"
-            d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z" />
-            <path fill-rule="evenodd" fill="rgb(0, 0, 0)"
-            d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z" />
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z" />
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z" />
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z" />
           </svg>
           <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
         </div>
       </div>
     </div>
+    
+      <script src="https://unpkg.com/js-polyfills@0.1.43/es6.js"></script>
+      <script id="MathJax-script"
+              async
+              src="https://www.unpkg.com/mathjax@3.2.2/es5/tex-mml-chtml.js"></script>
+    
     
     
   <script type="text/javascript">
@@ -370,53 +385,6 @@
   })();
 </script>
   
-  
-  <script type="text/javascript">
-    const timelineData = []
-    listEl = document.querySelector("#timeline-list");
-    radioApp = document.querySelector("#radio-app");
-    radioArticle = document.querySelector("#radio-article");
-    radioEvent = document.querySelector("#radio-event");
-    const visibleType = {
-      app: true,
-      article: false,
-      event: true
-    };
-    radioApp.addEventListener('change', e => updateList('app', e.target.checked));
-    radioArticle.addEventListener('change', e => updateList('article', e.target.checked));
-    radioEvent.addEventListener('change', e => updateList('event', e.target.checked));
-
-    function updateList(type, value) {
-      listDom.filter(line => line.type === type)
-        .forEach(line => {
-          if (value) {
-            line.el.className = line.el.className
-              .replace(/--hidden$/, "");
-          } else
-            line.el.className += "--hidden";
-        });
-    }
-    const listDom = timelineData.map(t => getLine(t));
-    listEl.append(...listDom.map(i => i.el));
-    updateList('article', false);
-
-    function getLine(data) {
-      const item = document.createElement("DIV");
-      item.className = `timeline-item-${data.type} timeline-item`;
-      item.innerHTML = `
-                          <div class="line-date">
-                          <div class="line-date-tag">${data.date}</div></div>
-                          <div class="line-anchor"></div>
-                          <div class="line-title">
-                              <img class="text-icon" src="/images/icon/icon-${data.type}.svg"/><a class="timeline-post" href="${data.path}">${data.title}</a>
-                          </div>
-                          `;
-      return {
-        el: item,
-        type: data.type,
-      };
-    };
-  </script >
   
 
   </body>
