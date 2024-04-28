@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8" />
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <title>
+      
+        陶哲轩实分析：2.自然数—Peano公理 | Mr.CAI BLOG
+      
+    </title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png" />
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/fire1.png" />
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/fire1.png" />
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color="" />
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/normal.ttf);
+        font-weight: normal;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css' />
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css"/>
+  
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/fire1.png" />
+        </a>
+        <input id="navBtn" type="checkbox" />
+        <div class="nav-right">
+          
+          <div class="nav-menu">
+            
+              
+                <a class="nav-menu-item" href="/math">数学</a>
+              
+                <a class="nav-menu-item" href="/essay">随笔</a>
+              
+            
+            
+          </div>
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner--toc">
+      <div class="post-content__head">
+        <div class="post-title">陶哲轩实分析：2.自然数—Peano公理</div>
+        <div class="post-info">
+          
+  <a href="/tags/%E9%99%B6%E5%93%B2%E8%BD%A9%E5%AE%9E%E5%88%86%E6%9E%90/" class="post-tag">#陶哲轩实分析</a><a href="/tags/%E8%87%AA%E7%84%B6%E6%95%B0/" class="post-tag">#自然数</a>
+
+
+          <span class="post-date">2024-04-28</span>
+        </div>
+      </div>
+      
+        <aside class="toc-outer">
+          <div class="toc-title">目录</div>
+          <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#peano%E5%85%AC%E7%90%86"><span class="post-toc-text">2.1 Peano公理</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%94%9F%E5%91%BD%E6%B8%B8%E6%88%8F"><span class="post-toc-text">2.1.1 生命游戏</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%BB%8E%E8%99%9A%E6%97%A0%E8%BD%AC%E7%94%9F%E5%88%B0%E5%BC%82%E4%B8%96%E7%95%8C%E5%BC%80%E5%90%AF%E6%9E%84%E9%80%A0%E7%9A%84%E8%87%AA%E7%84%B6%E6%95%B0%E7%9A%84%E6%94%BB%E7%95%A5%E7%94%9F%E6%B4%BB"><span class="post-toc-text">2.1.2
+从虚无转生到异世界开启构造的自然数的攻略生活</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%88%9B%E4%B8%96%E7%BA%AA"><span class="post-toc-text">1) 创世纪</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E8%BD%AE%E5%9B%9E"><span class="post-toc-text">2）轮回</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E4%B8%96%E7%95%8C%E7%BB%88%E7%82%B9"><span class="post-toc-text">3）世界终点</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E8%87%AA%E6%88%91%E6%9B%B4%E6%96%B0%E6%95%B0%E5%AD%A6%E5%BD%92%E7%BA%B3"><span class="post-toc-text">4）自我更新—数学归纳！！</span></a></li></ol></li></ol></li></ol>
+          <a href="#" class="toc-top">回到顶部</a>
+        </aside>
+      
+      <div class="post-content__body">
+        
+          <div class="post-gallery">
+            
+          </div>
+        
+        <h2 id="peano公理">2.1 Peano公理</h2>
+<p><em>"If people do not believe that mathematics is simple, it is only
+because they do not realize how complicated life is." ——John von
+Neumann</em></p>
+<p><br/></p>
+<p><img src="/assets/pbdh.jpg" width="90%" height="90%"></p>
+<center>
+<font size="3"><i>Fig.1 あいさか たいが</i> </font>
+</center>
+<p>掌中老虎大河曾经说过：许多作者的行文逻辑实际上很令人费解，目录的编排也十分不合理，这不仅出现在部分畅销书上，更出现在部分数学教材中。一些代数教材在第一章便讲解了行列式这一概念，这对于甚至不了解何为线性、何为代数的同学是极大的精神负担。作者以这种顺序编写教材或许是因其特定学科的教学目标所致，但仍然有必要向读者说明具体情况。</p>
+<p>部分书籍的出版甚至沦为了导师提携学生的方式，而知识水平薄弱的学生参与编纂导致教科书内漏洞百出，连习题的答案都存在错误，这种教科书流放到市场上便成为了坑害无数同学的劣质工具书。这种情况究其原因是作者过于注重了文章的内容输出，而忽略了文章的形式构造，即读者的阅读学习体验，这与快速工业化发展的国情是有联系的。</p>
+<p>本书的行文逻辑十分新颖，开篇是以由Peano公理构造自然数开始进行讲述的。Tao令读者忘记掉所有数学基础知识（四则运算、代数法则、十进制计数等），从零开始构造自然数序列。</p>
+<h3 id="生命游戏">2.1.1 生命游戏</h3>
+<p>笔者在初中时期曾接触过一种有趣的游戏——<a
+target="_blank" rel="noopener" href="https://iflycn.github.io/gamelife/">生命游戏</a>，它的学名为元胞自动机（Cellular
+Automaton/Automata）。在偌大的画布上存在着无数像素格，我们将其视为细胞，像素格为黑则为活细胞，反之则为死细胞，细胞的迭代更新遵循如下<a
+target="_blank" rel="noopener" href="https://www.zhihu.com/question/30782166">四条简单原则</a>：</p>
+<p><br/></p>
+<ul>
+<li>“人口过少”：任何活细胞如果活邻居少于2个，则死掉。</li>
+<li>“正常”：任何活细胞如果活邻居为2个或3个，则继续活。</li>
+<li>”人口过多”：任何活细胞如果活邻居大于3个，则死掉。</li>
+<li>“繁殖”：任何<a
+target="_blank" rel="noopener" href="https://www.zhihu.com/search?q=死细胞&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A53269298%7D">死细胞</a>如果活邻居正好是3个，则活过来。</li>
+</ul>
+<p><br/></p>
+<p>我们看到，这是系统内部类似于生命演化的四条简单规则，而正是这简单的四条规则，使得系统可以演化出极其复杂的现象。在系统的持续迭代下，甚至出现了一些可以自我移动、自我繁殖、向外延申的复杂像素组块。</p>
+<p><img src="/assets/lifegame.jpg" width="70%" height="70%"></p>
+<center>
+<font size="3"><i>Fig.2 生命游戏——滑翔者</i> </font>
+</center>
+<p>更令人震惊的是，生命游戏如今已被人证明是图灵完备的，也就是说，我们可以利用这简单的四条规则生成的系统，构造普通的逻辑门，进而构造出一个计算机。</p>
+<p>举这个例子，实际上是为了让大家能直观的理解简单法则构造复杂系统这一现象，这与本书中构造实数的过程有异曲同工之妙。</p>
+<h3 id="从虚无转生到异世界开启构造的自然数的攻略生活">2.1.2
+从虚无转生到异世界开启构造的自然数的攻略生活</h3>
+<p>大家可能会好奇，为什么标题不是从零开始构造自然数，其实是因为”零“本身也是需要重新定义的概念。</p>
+<h4 id="创世纪">1) 创世纪</h4>
+<p>我们从小学便学习了自然数，可以将自然数进行直观通俗的定义：<font size="2">（注：笔者在所有文章中的定义、定理、引理、公理序号将与实分析原文保持一致，而非以笔者的文章正常顺序进行标记）</font></p>
+<ul>
+<li><strong>Definition 2.1.1</strong> :
+<strong>自然数</strong>是集合<span
+class="math inline">\(N\)</span>中的元素。其中，集合<span
+class="math inline">\(N\)</span>是由0开始，无休止地向前进行计数所得到的所有元素构成的集合。我们称<span
+class="math inline">\(N\)</span>为<strong>自然数集</strong>。</li>
+</ul>
+<p><span class="math display">\[
+N:=\left\{0,1,2,3,4····\right\}
+\]</span></p>
+<p>其中<span
+class="math inline">\(a:=b\)</span>表示命题：令a的值等于b，<strong>Definition
+2.1.1</strong>给出了自然数的解释，但是这似乎并不能很好的说服我们，即从零开始无休止地向前计数真的能构造出自然数集<span
+class="math inline">\(N\)</span>吗，不会到某个数字然后绕回循环吗？</p>
+<p>在回答这个问题之前，我们首先要知道复杂运算实际是由简单运算构成的，指数运算<span
+class="math inline">\(5^{3}\)</span>其实是3个5相乘，乘法运算<span
+class="math inline">\(5 \times
+3\)</span>实际上是3个5相加，那么加法运算是如何构成的呢？实际上，加法运算本质前文所说的一种<strong>向前计数</strong>的过程，也就是<strong>增加</strong>的过程，那么我们便可以将<span
+class="math inline">\(5 +
+3\)</span>理解为5增长了3次，实际上，增长运算才是人类最开始接触的运算，早于加法。</p>
+<p>于是我们便可以正式开始定义自然数，来回答上面的问题：利用数字0和增量运算。在本书中，增量运算的符号与计算机语言保持一致，即n++为n的增量，也就是紧跟在n后的数字。那么自然数显然可以表示为：0,
+0++, (0++)++
+这样的形式，我们思考一下什么样的系统会生成这样的序列，很容易便可以得到"上帝"创造自然数的前两条游戏规则：</p>
+<ul>
+<li><strong>Axiom 2.1</strong> : 0是一个自然数。（原点）</li>
+<li><strong>Axiom 2.2</strong> :
+如果n是一个自然数，那么n++也是一个自然数。（递推）</li>
+</ul>
+<p>很好，我们试图应用这个系统规则推演迭代一下，用<strong>Axiom
+2.1</strong>创造出世界的起点0，接着运用<strong>Axiom
+2.2</strong>创造自然数0++，再重复运用<strong>Axiom
+2.2</strong>创造自然数(0++)++，无休止的迭代下去，我们就完美的生成了上帝的序列——自然数序列。</p>
+<p>显然随着增量运算的迭代，数字的记号特别不方便，为了标记方便一些，我们采用熟悉的印度-阿拉伯数字记号，开始赋值定义
+<span class="math inline">\(1:=0++\)</span>,<span
+class="math inline">\(2:=(0++)++\)</span>,<span
+class="math inline">\(3:=((0++)++)++\)</span>等等。</p>
+<p>利用这个系统我们可以做一些事情了！比如证明一下 <strong>Proposition
+2.1.4</strong>：3是一个自然数。</p>
+<p><strong>Proof</strong>： 根据<strong>Axiom
+2.1</strong>我们得到0是自然数，利用<strong>Axiom
+2.2</strong>我们得到0++=1是一个自然数，再次利用<strong>Axiom
+2.2</strong>我们可以得到1++=2也是一个自然数，又根据<strong>Axiom
+2.2</strong>我们可以得到2++=3还是一个自然数</p>
+<p>这似乎非常显然，我们轻而易举的就构造出了自然数序列，这太easy了！</p>
+<p><img src="/assets/chuangshiji.jpg" width="100%" height="100%"></p>
+<center>
+<font size="3"><i>Fig.3 创世纪</i> </font>
+</center>
+<h4 id="轮回">2）轮回</h4>
+<p>这显然是不可能的，我们发现如此生成的自然数序列有一个很严重的问题——绕回问题。举个例子，计算机的内存限于物理性质是有限的，增量运算达到一定次数后内存便会溢出，在计算机系统中运行65536次增量运算后，一个整数的双字节表示便会绕回到0。仅依靠上面两个公理，我们或许无法阻止绕回问题的发生，于是我们尝试修补一下这个世界：</p>
+<ul>
+<li><strong>Axiom 2.3</strong> :
+0不紧跟在任意一个自然数之后，即对于任意自然数n，n++≠0。（防绕零）</li>
+</ul>
+<p>很好，我们现在为这个世界新添加了一个法则，来对着系统推演一下看看效果，证明一下<strong>Proposition
+2.1.6</strong>：4不等于0。</p>
+<p>你可能会疑惑，为什么要证4不等于0，其实这并不是显然的，在最初的系统模型中，我们无法确定3++是否等于0，即无法确定4是否等于0</p>
+<p><strong>Proof</strong>： 由<strong>Definition
+2.1.1</strong>可知4=3++，根据<strong>Axiom 2.1</strong>和<strong>Axiom
+2.2</strong>我们知道3是一个自然数，再利用<strong>Axiom
+2.3</strong>我们可以得到3++≠0，即4≠0</p>
+<p>事物的发展本来就是持续螺旋上升的，我们成功的阻止了世界的轮回，让事物可以持续发展下去。</p>
+<h4 id="世界终点">3）世界终点</h4>
+<p>可惜发展遇到了尽头，由这三条游戏规则构成的自然数序列显然存在一些问题。由上面我们得到4为自然数，但是令4++=4，也就是5=4，进而导致(4++)++=4，也就是6=4，等等，仔细观察我们发现，这完全是在符合上面三条公理下发生的事情。还可以令4++=1，也就是5=1，这也完全符合上述三条公理。显然，自然数序列在生成的过程中碰壁了，达到了天花板，开始对序列中的其他元素进行绕回。我们当然希望自然数序列中的每一个元素都是独一无二的数值，为了继续阻止这种绕回问题的发生，添加规则：</p>
+<ul>
+<li><strong>Axiom 2.4</strong> :
+对于不同的自然数而言，紧跟在其后的自然数也是不同的，即对于不相等的两个自然数n、m，n++也不等于m++（逆否命题：换言之，若n++与m++相等，则一定有n与m也相等）。（防绕非零元素）</li>
+</ul>
+<p>其实，防止绕回非零元素的法则有许多，不一定非要是上面这条，但上述规则均为最简，我们利用这四条法则来证明一下<strong>Proposition
+2.1.8</strong>：6不等于2。</p>
+<p><strong>Proof</strong>：
+原文中利用反证法假设6等于2进行证悖，我们这里尝试正向证明，由<strong>Axiom
+2.3</strong>可知4≠0，再由<strong>Axiom
+2.4</strong>可知4++≠0++，即5≠1，继续利用<strong>Axiom
+2.4</strong>可知5++≠1++，即6≠2，其实原文中的反证法更加的简单直观，但原理相同，只不过反证法需要用到公理4的逆否命题。</p>
+<p>宇宙本来就应该是无穷无尽的，现在我们杜绝了一切循环、绕回现象的发生，自然数序列成功从有穷进化到了无穷，真正达到了无休止的效果。</p>
+<p><img src="/assets/wuqiong.jpg" width="70%" height="70%"></p>
+<center>
+<font size="3"><i>Fig.4 无穷宇宙</i> </font>
+</center>
+<h4 id="自我更新数学归纳">4）自我更新—数学归纳！！</h4>
+<p>现在高兴还太早了。的确，根据以上世界法则生成的自然数序列确实是无休止的进行增量运算，且每一个元素都是独一无二的。可是观察以下序列：
+<span class="math display">\[
+N:=\left\{0,0.5,1,1.5,2,2.5,3····\right\}
+\]</span>
+我们惊讶的发现，它完全满足上述四条公理，但是却完全不是一个我们想构造的自然数序列，实际上整数中间的数字是0.5、0.4、0.3····都可以，这种夹杂在整数间的元素，被Tao称为流氓元素。这确实太犯规了！简直就像张三钻了法律的漏洞，流氓元素成功的在四条公理的眼皮下污染了我们希望的自然数序列，污染了上帝的神迹！但别紧张，的确存在这样一种极其巧妙的方法，可以让序列内部剔除掉所有流氓元素。这便是我们熟悉的<strong>数学归纳法</strong>：</p>
+<ul>
+<li><strong>Axiom 2.5</strong> :（数学归纳法）
+令P(n)表示自然数n的任意一个性质，如果同时满足P(0)为真、P(n)为真时一定有P(n++)也为真这两个条件，那么对于任意自然数n，P(n)一定为真</li>
+</ul>
+<p>实际上，<strong>Axiom 2.5</strong>
+并不能算作一个公理，而是一个公理模板，也就是说它不能算做世界的法则，而应该算成创造世界法则的工具<strong>Tool
+2.5</strong>。因为每一个满足<strong>Axiom 2.5</strong>
+的性质P都可以算作一个小公理。</p>
+<p>数学归纳法的原理并不理解，在生活中我们甚至不自觉的会应用到这种思想，但困扰很多人的问题是，如何利用数学归纳法的原理将流氓元素剔除？？我们来实际看一下<strong>Axiom
+2.5</strong>的运行原理：</p>
+<ul>
+<li>假设性质P(n)满足以下条件：P(0)为真，且P(n)为真时P(n++)为真，那么我们可以推出P(0++)=P(1)为真，继而推出P(1++)=P(2)为真，重复这个过程，我们便可以得到P(1)、P(2)、P(3)、P(4)···全为真。</li>
+</ul>
+<p>哦？我们发现上述运行原理中根本不关P(0.5)的事情，永远也得不出P(0.5)为真，因为数学归纳法的原理中通过对变量进行++，进而严格规定了只有对整数自然数才能产生结果真，而既然P(0.5)不为真，这肯定是违背了<strong>Axiom
+2.5</strong>中“对于任意自然数n，P(n)都成立”这句话。换句话说，我们通过这种方法把流氓从人群中<strong>筛选</strong>了出来。</p>
+<p>但是筛选出来之后呢？筛选出来之后怎么剔除呀？这取决于性质P(n)是什么，也就是说我们只要精心设计出P(n)满足“<em>P(0)为真，且P(n)为真时P(n++)为真</em>”这句话，就可以将其代入公理模式<strong>Axiom
+2.5</strong>生成一个对于任意自然数成立的小公理。来试试看：</p>
+<p>我们假设P(n)为“n不是一个整数加上0.5”，并将P(n)代入到<strong>Axiom
+2.5</strong>
+中，我们就能得到P(0)为真，且P(n)为真时P(n++)一定为真，所以对于任意自然数n，P(n)为真，即所有自然数都不是一个整数加上0.5。以此方法我们可以设计无数P(n)代入<strong>Axiom
+2.5</strong>，来将所有的非整数自然数全部剔除在外，再与前面四个公理联合，发现果然只剩下了我们心心念念的<strong>自然数集</strong><span
+class="math inline">\(N\)</span>，Amazing</p>
+<p>至此，我们通过五条游戏法则完成了完美自然数集的构造，一个有序的世界终于被我们创造了出来，所以我们称其为五条悟（bushi）。</p>
+<p><img src="/assets/5tw.jpg" width="100%" height="100%"></p>
+<center>
+<font size="3"><i>Fig.5 五条悟 ごじょうさとる</i> </font>
+</center>
+<p>实际上，<strong>Axiom
+2.1~2.5</strong>被称为关于自然数的<strong>Peano公理</strong>。书中提到一些注意点</p>
+<ul>
+<li>古人认为数不可避免的会与外部例如物理概念产生联系，对数的公理化工作是现代数学的成果，现代数学中发现了数可以仅以公理化产生，以概念形式存在。这避免了过深的哲学问题。</li>
+<li>我们只是通过公理化产生了一个自然数系统，并且关注可以利用其做什么。而不在乎自然数是什么，有什么意义，这是抽象化的数学研究必要的。</li>
+<li>自然数每一个元素都是有穷的，但整体却是无穷的，这可以通过<strong>Axiom
+2.5</strong>证明。</li>
+<li>我们当然可以采用〇、Ⅰ、Ⅱ、Ⅲ···的自然数系统但这与我们创造的系统同构，且可以一一对应，故我们只采用印度-阿拉伯数字标记自然数序列。</li>
+</ul>
+<p><BR/></p>
+<p><img src="/assets/dahe1.jpg" width="90%" height="90%"></p>
+<center>
+<p><em>“この世界の谁ひとり见たことがない物がある。“</em></p>
+<p><em>”それは优しくて、とても甘い。“</em></p>
+<p><em>”たぶん、见ることができたなら、谁もがそれを欲しいがあるはずだ。”</em></p>
+</center>
+
+      </div>
+    </div>
+    
+  </article>
+  <div class="post__foot">
+    
+      <div class="like-author">
+  <input type="checkbox" id="likeCode" />
+  <div class="author-face">
+    <img height="100px"
+         width="100px"
+         id="front-face"
+         alt="author face"
+         src="/assets/author-face.jpg" />
+    <img height="100px"
+         width="100px"
+         id="back-face"
+         alt="like code"
+         src="/assets/pay-code.jpg" />
+  </div>
+  <div class="like-text">“KICK MY ASS~”</div>
+  <label for="likeCode" class="like-btn">
+    <svg viewBox="0 0 1024 1024"
+         width="20px"
+         style="margin-right: 10px"
+         height="20px">
+      <path d="M466.88 908.96L113.824 563.296a270.08 270.08 0 0 1 0-387.392c108.8-106.56 284.896-106.56 393.696 0 1.504 1.472 2.976 2.944 4.448 4.48 1.472-1.536 2.944-3.008 4.448-4.48 108.8-106.56 284.896-106.56 393.696 0a269.952 269.952 0 0 1 34.016 347.072l-387.392 385.6a64 64 0 0 1-89.92 0.384z" p-id="13650" fill="#ee4242" />
+    </svg>
+    LOVE
+  </label>
+</div>
+
+    
+    <div class="post-nav">
+  
+    <div class="post-nav-item-left"></div>
+  
+  <div class="vhr"></div>
+  
+    <a class="post-nav-item-right" href="/2023/12/22/essay/%E5%B8%8C%E9%9C%B2%E8%8F%B2%E8%91%89%E7%89%B9%E7%9A%84%E5%BA%94%E8%AE%B8%E4%B9%8B%E5%9C%B0/">
+      <div class="text-align">
+        <span class="text-small">下一篇</span>
+        <svg t="1670570876164"
+             class="icon"
+             viewBox="0 0 1024 1024"
+             transform="scale(-1,-1)"
+             width="16"
+             height="16">
+          <path d="M384 512L731.733333 202.666667c17.066667-14.933333 19.2-42.666667 4.266667-59.733334-14.933333-17.066667-42.666667-19.2-59.733333-4.266666l-384 341.333333c-10.666667 8.533333-14.933333 19.2-14.933334 32s4.266667 23.466667 14.933334 32l384 341.333333c8.533333 6.4 19.2 10.666667 27.733333 10.666667 12.8 0 23.466667-4.266667 32-14.933333 14.933333-17.066667 14.933333-44.8-4.266667-59.733334L384 512z" p-id="14596" />
+        </svg>
+      </div>
+      希露菲葉特的应许之地
+    </a>
+  
+</div>
+
+    
+    
+  </div>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              <div class="matts">星</div><div class="matts">星</div><div class="matts">之</div><div class="matts">火</div>
+            </div>
+          
+            <div class="foot-line">
+              <div class="matts">可</div><div class="matts">以</div><div class="matts">燎</div><div class="matts">原</div>
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg" />
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://xhd0728.github.io">辛海东</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg" />
+                  <a class="foot-link"
+                     href="mailto:2240020830@student.must.edu.mo?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg" />
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/cjq0911">cjq0911</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg" />
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://www.zhihu.com/people/shi-er-1-51">十二</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg" />
+                <a class="foot-link" href="mailto:2240020830@student.must.edu.mo">2240020830@student.must.edu.mo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="http://cjq0911.github.io">Mr.CAI BLOG</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z" />
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z" />
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z" />
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+      <script src="https://unpkg.com/js-polyfills@0.1.43/es6.js"></script>
+      <script id="MathJax-script"
+              async
+              src="https://www.unpkg.com/mathjax@3.2.2/es5/tex-mml-chtml.js"></script>
+    
+    
+    
+  
+
+  </body>
+</html>
